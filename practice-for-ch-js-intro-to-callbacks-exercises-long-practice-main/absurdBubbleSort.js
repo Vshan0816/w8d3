@@ -23,9 +23,9 @@ function askifGreaterThan(el1, el2, callback) {
 
 
 function callback(bool) {
-    
-    console.log(bool);
     reader.close();
+    return bool;
+    
 }
 
 
@@ -34,6 +34,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
 
     if (i == (arr.length -1)) {
         outerBubbleSortLoop(madeAnySwaps);
+        return;
     }
 
     if (i < arr.length - 1)  {
@@ -52,5 +53,10 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
 
 }
 
+function outerBubbleSortLoop() {
+    console.log("In outer bubble sort")
+}
 
-askifGreaterThan(1, 2, callback);
+
+// askifGreaterThan(1, 2, callback);
+innerBubbleSortLoop([3,2,1], 0, false, outerBubbleSortLoop)

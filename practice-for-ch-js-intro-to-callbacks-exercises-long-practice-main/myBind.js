@@ -5,11 +5,17 @@
 // this refers to the scope
 
 Function.prototype.myBind = function(context) {
-    debugger
+    // debugger
     // this -> turnOn
     // ctx -> lamp
-    return () => this.call(context); // lamp.turnOn()
+    return () => this.call(context); // lamp.turnOn
 };
+
+// Function.prototype.myBind = function(context) {
+
+//     const that = this;
+//     return function () { that.call(context)}; // lamp.turnOn()
+// };
 
 class Lamp {
     constructor() {
