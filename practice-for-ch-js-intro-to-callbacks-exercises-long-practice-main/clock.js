@@ -11,6 +11,12 @@ class Clock {
       // 3. Call printTime.
       // 4. Schedule the tick at 1 second intervals.
     };
+
+    // setInterval(callback, time) {
+    //   loop {
+    //     callback()
+    //   }
+    // }
   
     printTime() {
         let new_arr = [this.hours, this.minutes, this.seconds];
