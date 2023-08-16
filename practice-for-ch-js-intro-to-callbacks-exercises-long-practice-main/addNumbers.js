@@ -32,6 +32,7 @@ function addNumbers(sum, numsLeft, completionCallback) {
 
 
 function completionCallback(x) {
+    reader.close();
     return x;
 }
 
